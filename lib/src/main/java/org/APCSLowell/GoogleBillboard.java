@@ -6,10 +6,22 @@ package org.APCSLowell;
 public class GoogleBillboard {
     public boolean isPrime(long n) {
         // Copy and paste your answer from CodingBat appropriatley here.
-        return false;
+if (n < 2)
+  return false;
+  for (int i = 2; i <= Math.sqrt(n); i++){
+if (n % i == 0)
+  return false;
+  }
+  return true;
     }
+
     public long firstPrimeNumberIn(String n) {
         // Write your code here.
-        return -1;
+for (int i = 2; i < n.length() - 10; i++){
+String digits = n.substring(i, i + 10);
+long dNum = Long.parselong(digits);
+if (isPrime(dNum) == true)
+return dNum;
+}
     }
 }
