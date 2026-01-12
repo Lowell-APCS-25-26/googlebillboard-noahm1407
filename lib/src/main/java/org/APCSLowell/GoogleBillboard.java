@@ -18,10 +18,10 @@ if (n % i == 0)
     public long firstPrimeNumberIn(String n) {
         // Write your code here.
 for (int i = 2; i < n.length() - 10; i++){
-String digits = n.substring(i, i + 10);
-long dNum = Long.parselong(digits);
+Long dNum = Long.parseLong(n.substring(i, i + 10));
 if (isPrime(dNum) == true)
 return dNum;
 }
+return -1;
     }
 }
